@@ -1,4 +1,4 @@
-# Applied AI Paper Notes
+# AI Paper Notes
 
 面向工程与产品视角的中文论文速记仓库。重点记录：
 - LLM / VLM / MLLM / Agent

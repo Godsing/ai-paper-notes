@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / 'data' / 'index.json'
 README = ROOT / 'README.md'
 
-HEADER = '''# Applied AI Paper Notes
+HEADER = '''# AI Paper Notes
 
 面向工程与产品视角的中文论文速记仓库。重点记录：
 - LLM / VLM / MLLM / Agent
