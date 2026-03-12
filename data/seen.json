@@ -1,0 +1,11 @@
+{
+  "papers": {
+    "2603.09906": {
+      "title": "Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs",
+      "date": "2026-03-11",
+      "note_path": "papers/2026/2026-03-11/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms.md",
+      "canonical_url": "https://arxiv.org/html/2603.09906",
+      "source_name": "hf-daily"
+    }
+  }
+}
