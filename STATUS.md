@@ -12,10 +12,16 @@
 - HF Daily Top 3 选择器雏形：`scripts/hf_select.py`
 - 论文阅读子 agent 规范初稿：`prompts/paper-reader.md`
 
+## 已新增
+
+- 6 个论文相关 skills 已安装并完成快速对比
+- 对比报告：`reports/skills-comparison-2026-03-13.md`
+- 新 skill：`skills/paper-note-pipeline/`
+- skill 打包产物：`dist/paper-note-pipeline.skill`
+
 ## 待完成
 
-- GitHub public repo 创建并 push
 - 将 HF Daily cron 接到仓库写入流程
 - 用独立子 agent 实际执行逐篇总结
 - 更稳的工业价值排序规则
-- manual ingest 命令入口
+- manual ingest 正式命令入口
