@@ -19,6 +19,7 @@ Produce a stable pipeline with five outputs:
 Read these references when needed:
 - `references/scoring-rubric.md` for rating rules
 - `references/output-schema.md` for note fields
+- `references/source-reading.md` for mandatory source-reading order
 
 ## Workflow
 
@@ -61,7 +62,25 @@ Do not use the same emphasis for every type:
 - `system`: focus on architecture, tradeoffs, deployment implications
 - `survey`: focus on synthesis value, not section-by-section compression
 
-### Step 4: Select the canonical source link
+### Step 4: Read the source text before writing
+
+This step is mandatory.
+
+For arXiv papers, first run:
+
+```bash
+python3 skills/paper-note-pipeline/scripts/fetch_paper_source.py <arxiv-id-or-url>
+```
+
+Behavior:
+- Try arXiv HTML first.
+- If HTML is available, read the extracted HTML text before writing any final note.
+- Only if HTML is unavailable or broken may you fall back to arXiv ABS.
+- Do not write the final markdown note from title + abstract alone when HTML is available.
+
+Use the returned `canonical_url` and extracted `text` as the primary reading source.
+
+### Step 5: Select the canonical source link
 
 Choose source links in this order:
 1. arXiv HTML
@@ -70,7 +89,7 @@ Choose source links in this order:
 
 Record the best available link as `canonical_url`. Keep alternate links in `other_urls`.
 
-### Step 5: Write the note in repository mode
+### Step 6: Write the note in repository mode
 
 Repository mode is the default. Write concise Chinese notes with these sections:
 - 一句话结论
@@ -88,7 +107,7 @@ Requirements:
 
 When the paper is shallow, weakly evidenced, or only marginally relevant, either drop it or write a short note that explicitly says why it is not a priority.
 
-### Step 6: Score consistently
+### Step 7: Score consistently
 
 Always score:
 - industrial value
@@ -96,7 +115,7 @@ Always score:
 
 Use `references/scoring-rubric.md`.
 
-### Step 7: Persist outputs
+### Step 8: Persist outputs
 
 When operating inside the `ai-paper-notes` repository:
 - write note markdown under `papers/YYYY/YYYY-MM-DD/`
@@ -141,6 +160,7 @@ Rules:
 
 Adopt these good patterns:
 - From deep-reading skills: read enough before writing; do not summarize from title alone.
+- Default to arXiv HTML full text when available; ABS is fallback, not peer.
 - From SOP-based skills: classify paper type before choosing emphasis.
 - From orchestrator skills: separate collection, per-paper reading, and final archiving.
 - From digest skills: prefer structured batch JSON between pipeline stages.

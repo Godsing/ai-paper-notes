@@ -18,6 +18,7 @@
 - 对比报告：`reports/skills-comparison-2026-03-13.md`
 - 新 skill：`skills/paper-note-pipeline/`
 - skill 打包产物：`dist/paper-note-pipeline.skill`
+- 已把“先读 arXiv HTML 原文，再写总结；ABS 仅作降级”写入 skill 并实现 `fetch_paper_source.py`
 
 ## 待完成
 
