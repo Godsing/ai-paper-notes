@@ -18,6 +18,67 @@
       "readability": 4,
       "comment": "对做检索增强、长推理和 self-reflection 的团队有参考价值。它提醒我们：reasoning 既可能增益知识召回，也可能成为幻觉放大器。",
       "note_path": "papers/2026/2026-03-11/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms.md"
+    },
+    {
+      "paper_id": "2603.12056",
+      "title": "XSkill: Continual Learning from Experience and Skills in Multimodal Agents",
+      "date": "2026-03-14",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.12056",
+      "hf_url": "https://huggingface.co/papers/2603.12056",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.12056"
+      ],
+      "one_sentence_takeaway": "XSkill 把“经验”和“技能”拆成两条可检索知识流，让多模态 agent 在不改参数的前提下持续提升工具使用效率与任务规划能力。",
+      "problem_background": "现有多模态 agent 常见两个痛点：一是工具调用低效，简单任务走太多步、复杂任务又探索不够；二是工具编排不灵活，面对新任务时很难把已有操作模式迁移过去。作者要解决的是：能否让冻结模型像人一样，从过去轨迹中持续积累可复用知识。",
+      "method_experiment": "论文将知识拆为任务级 skill 和动作级 experience：前者描述可复用工作流，后者记录具体情境下的决策经验。训练阶段从多路径 rollout 中做视觉条件下的总结、跨轨迹互评和层级去重；推理阶段先做任务分解，再按当前视觉上下文检索并改写相关 skill/experience，注入 prompt 使用。实验覆盖 5 个多模态 benchmark、4 个 backbone，与 tool-only 和 learning-based baseline 对比。",
+      "findings_conclusion": "XSkill 在不同模型和任务上都稳定优于基线，相比纯工具调用方案的 Average@4 提升约 2.58 到 6.71 分，在更难设置下相对最强基线最高提升 11.13 分。作者还发现 skill 更偏高层规划，experience 更偏局部决策与纠错，两者确实互补。",
+      "industrial_value": 5,
+      "readability": 4,
+      "comment": "这篇最值得工程团队看，因为它不是再训一个更大模型，而是讨论如何给 agent 建“外部可积累经验库”。对做 GUI agent、视觉工具链、复杂 workflow 编排的团队都很有现实参考价值。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-14/xskill-continual-learning-from-experience-and-skills-in-multimodal-agents.md"
+    },
+    {
+      "paper_id": "2603.11103",
+      "title": "Understanding by Reconstruction: Reversing the Software Development Process for LLM Pretraining",
+      "date": "2026-03-14",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.11103",
+      "hf_url": "https://huggingface.co/papers/2603.11103",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.11103"
+      ],
+      "one_sentence_takeaway": "这篇论文的核心主张是：代码大模型不该只看仓库最终态，而要反向重建‘规划—实现—调试’轨迹来做继续预训练，从而补足长程软件工程能力。",
+      "problem_background": "作者认为静态代码仓库只保留了结果，没有保留需求分析、架构设计、调试修复等中间思维过程，因此模型虽然会写短代码，却不擅长复杂软件工程中的长链路推理与协作。问题本质是：预训练数据缺少生成过程监督。",
+      "method_experiment": "方法上，他们把高质量开源仓库当作 ground truth，用多 agent 模拟反向生成其开发过程：主 agent 负责项目规划，子 agent 负责文件级实现，并注入真实仓库的目录结构、依赖关系等信息避免轨迹漂移。随后再用基于搜索的 CoT 优化，以目标代码似然/困惑度为准则迭代替换更优思维步骤。最后把这些合成的 agent 轨迹用于 Llama-3-8B 的 continue pretraining，并评测长上下文、代码、推理和 agent 能力。",
+      "findings_conclusion": "实验结果表明，基于重建轨迹继续预训练后，模型在长上下文理解、编码能力、推理迁移和 agentic 任务上都有明显提升。论文想传达的关键不是某个 trick，而是一个数据构造范式：把静态仓库还原成动态开发过程，监督信号会更贴近真实软件工程。",
+      "industrial_value": 5,
+      "readability": 3,
+      "comment": "对做代码模型、软件工程 agent、仓库级 pretraining 的团队很有价值。它给出了一条比单纯堆更多代码更有想象力的路线：去合成高质量开发轨迹，而不是只喂最终代码。",
+      "paper_type": "method",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-14/understanding-by-reconstruction-reversing-the-software-development-process-for-l.md"
+    },
+    {
+      "paper_id": "2603.12180",
+      "title": "Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections",
+      "date": "2026-03-14",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/abs/2603.12180",
+      "hf_url": "https://huggingface.co/papers/2603.12180",
+      "other_urls": [],
+      "one_sentence_takeaway": "MADQA 用更贴近真实文档工作流的基准表明：当前文档型 agent 还没学会高质量策略推理，更多是在靠高成本 brute-force 搜索硬顶正确率。",
+      "problem_background": "文档密集型任务是企业场景里非常现实的一类 agent 用例，但现有评测往往更关注最终答对没有、较少衡量为了答对付出了多少检索和推理代价。作者关心的是：agent 到底是在‘有策略地导航文档’，还是只是在随机试错。",
+      "method_experiment": "论文提出 MADQA：包含 2250 个人工编写问题、对应 800 份异构 PDF 文档，并用 Classical Test Theory 设计题目以提升区分度。评测不只看准确率，还看 accuracy-effort trade-off，用来衡量 agent 在完成任务时的搜索代价与策略质量，并与人类搜索者及 oracle 上界进行比较。",
+      "findings_conclusion": "结果显示，最强 agent 的原始准确率可以接近人类，但做对的题和人类并不相同，而且明显依赖暴力搜索来弥补规划薄弱；它们距离 oracle 仍有接近 20% 的差距，还会陷入低效循环。结论很直接：文档 agent 的短板不是‘不会读’，而是‘不会高效地找和规划’。",
+      "industrial_value": 4,
+      "readability": 4,
+      "comment": "虽然这篇更偏 benchmark，但对做企业检索、PDF agent、知识库问答的人很实用。它提醒团队别只盯最终正确率，更要测成本、步骤和是否存在无效搜索。",
+      "paper_type": "benchmark",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-14/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md"
     }
   ]
 }

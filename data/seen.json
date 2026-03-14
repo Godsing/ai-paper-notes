@@ -6,6 +6,27 @@
       "note_path": "papers/2026/2026-03-11/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms.md",
       "canonical_url": "https://arxiv.org/html/2603.09906",
       "source_name": "hf-daily"
+    },
+    "2603.12056": {
+      "title": "XSkill: Continual Learning from Experience and Skills in Multimodal Agents",
+      "date": "2026-03-14",
+      "note_path": "papers/2026/2026-03-14/xskill-continual-learning-from-experience-and-skills-in-multimodal-agents.md",
+      "canonical_url": "https://arxiv.org/html/2603.12056",
+      "source_name": "hf-daily"
+    },
+    "2603.11103": {
+      "title": "Understanding by Reconstruction: Reversing the Software Development Process for LLM Pretraining",
+      "date": "2026-03-14",
+      "note_path": "papers/2026/2026-03-14/understanding-by-reconstruction-reversing-the-software-development-process-for-l.md",
+      "canonical_url": "https://arxiv.org/html/2603.11103",
+      "source_name": "hf-daily"
+    },
+    "2603.12180": {
+      "title": "Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections",
+      "date": "2026-03-14",
+      "note_path": "papers/2026/2026-03-14/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md",
+      "canonical_url": "https://arxiv.org/abs/2603.12180",
+      "source_name": "hf-daily"
     }
   }
 }
