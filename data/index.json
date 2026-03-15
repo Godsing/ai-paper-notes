@@ -22,7 +22,7 @@
     {
       "paper_id": "2603.12056",
       "title": "XSkill: Continual Learning from Experience and Skills in Multimodal Agents",
-      "date": "2026-03-14",
+      "date": "2026-03-15",
       "source_name": "hf-daily",
       "canonical_url": "https://arxiv.org/html/2603.12056",
       "hf_url": "https://huggingface.co/papers/2603.12056",
@@ -38,12 +38,12 @@
       "comment": "这篇最值得工程团队看，因为它不是再训一个更大模型，而是讨论如何给 agent 建“外部可积累经验库”。对做 GUI agent、视觉工具链、复杂 workflow 编排的团队都很有现实参考价值。",
       "paper_type": "system",
       "relevant": true,
-      "note_path": "papers/2026/2026-03-14/xskill-continual-learning-from-experience-and-skills-in-multimodal-agents.md"
+      "note_path": "papers/2026/2026-03-15/xskill-continual-learning-from-experience-and-skills-in-multimodal-agents.md"
     },
     {
       "paper_id": "2603.11103",
       "title": "Understanding by Reconstruction: Reversing the Software Development Process for LLM Pretraining",
-      "date": "2026-03-14",
+      "date": "2026-03-15",
       "source_name": "hf-daily",
       "canonical_url": "https://arxiv.org/html/2603.11103",
       "hf_url": "https://huggingface.co/papers/2603.11103",
@@ -59,12 +59,12 @@
       "comment": "对做代码模型、软件工程 agent、仓库级 pretraining 的团队很有价值。它给出了一条比单纯堆更多代码更有想象力的路线：去合成高质量开发轨迹，而不是只喂最终代码。",
       "paper_type": "method",
       "relevant": true,
-      "note_path": "papers/2026/2026-03-14/understanding-by-reconstruction-reversing-the-software-development-process-for-l.md"
+      "note_path": "papers/2026/2026-03-15/understanding-by-reconstruction-reversing-the-software-development-process-for-l.md"
     },
     {
       "paper_id": "2603.12180",
       "title": "Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections",
-      "date": "2026-03-14",
+      "date": "2026-03-15",
       "source_name": "hf-daily",
       "canonical_url": "https://arxiv.org/abs/2603.12180",
       "hf_url": "https://huggingface.co/papers/2603.12180",
@@ -78,7 +78,7 @@
       "comment": "虽然这篇更偏 benchmark，但对做企业检索、PDF agent、知识库问答的人很实用。它提醒团队别只盯最终正确率，更要测成本、步骤和是否存在无效搜索。",
       "paper_type": "benchmark",
       "relevant": true,
-      "note_path": "papers/2026/2026-03-14/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md"
+      "note_path": "papers/2026/2026-03-15/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md"
     }
   ]
 }

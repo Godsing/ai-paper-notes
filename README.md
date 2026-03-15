@@ -18,7 +18,7 @@
 
 | 日期 | 标题 | 来源 | 工业价值 | 易读性 |
 |---|---|---|---:|---:|
-| 2026-03-14 | [XSkill: Continual Learning from Experience and Skills in Multimodal Agents](papers/2026/2026-03-14/xskill-continual-learning-from-experience-and-skills-in-multimodal-agents.md) | hf-daily | ★★★★★ | ★★★★ |
-| 2026-03-14 | [Understanding by Reconstruction: Reversing the Software Development Process for LLM Pretraining](papers/2026/2026-03-14/understanding-by-reconstruction-reversing-the-software-development-process-for-l.md) | hf-daily | ★★★★★ | ★★★ |
-| 2026-03-14 | [Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections](papers/2026/2026-03-14/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md) | hf-daily | ★★★★ | ★★★★ |
+| 2026-03-15 | [XSkill: Continual Learning from Experience and Skills in Multimodal Agents](papers/2026/2026-03-15/xskill-continual-learning-from-experience-and-skills-in-multimodal-agents.md) | hf-daily | ★★★★★ | ★★★★ |
+| 2026-03-15 | [Understanding by Reconstruction: Reversing the Software Development Process for LLM Pretraining](papers/2026/2026-03-15/understanding-by-reconstruction-reversing-the-software-development-process-for-l.md) | hf-daily | ★★★★★ | ★★★ |
+| 2026-03-15 | [Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections](papers/2026/2026-03-15/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md) | hf-daily | ★★★★ | ★★★★ |
 | 2026-03-11 | [Thinking to Recall: How Reasoning Unlocks Parametric Knowledge in LLMs](papers/2026/2026-03-11/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms.md) | hf-daily | ★★★★ | ★★★★ |

@@ -1,0 +1,18 @@
+{
+  "paper_id": "2603.12180",
+  "title": "Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections",
+  "date": "2026-03-15",
+  "source_name": "hf-daily",
+  "canonical_url": "https://arxiv.org/abs/2603.12180",
+  "hf_url": "https://huggingface.co/papers/2603.12180",
+  "other_urls": [],
+  "one_sentence_takeaway": "MADQA 用更贴近真实文档工作流的基准表明：当前文档型 agent 还没学会高质量策略推理，更多是在靠高成本 brute-force 搜索硬顶正确率。",
+  "problem_background": "文档密集型任务是企业场景里非常现实的一类 agent 用例，但现有评测往往更关注最终答对没有、较少衡量为了答对付出了多少检索和推理代价。作者关心的是：agent 到底是在‘有策略地导航文档’，还是只是在随机试错。",
+  "method_experiment": "论文提出 MADQA：包含 2250 个人工编写问题、对应 800 份异构 PDF 文档，并用 Classical Test Theory 设计题目以提升区分度。评测不只看准确率，还看 accuracy-effort trade-off，用来衡量 agent 在完成任务时的搜索代价与策略质量，并与人类搜索者及 oracle 上界进行比较。",
+  "findings_conclusion": "结果显示，最强 agent 的原始准确率可以接近人类，但做对的题和人类并不相同，而且明显依赖暴力搜索来弥补规划薄弱；它们距离 oracle 仍有接近 20% 的差距，还会陷入低效循环。结论很直接：文档 agent 的短板不是‘不会读’，而是‘不会高效地找和规划’。",
+  "industrial_value": 4,
+  "readability": 4,
+  "comment": "虽然这篇更偏 benchmark，但对做企业检索、PDF agent、知识库问答的人很实用。它提醒团队别只盯最终正确率，更要测成本、步骤和是否存在无效搜索。",
+  "paper_type": "benchmark",
+  "relevant": true
+}
