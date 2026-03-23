@@ -27,6 +27,27 @@
       "note_path": "papers/2026/2026-03-15/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md",
       "canonical_url": "https://arxiv.org/abs/2603.12180",
       "source_name": "hf-daily"
+    },
+    "2603.15030": {
+      "title": "VTC-Bench: Evaluating Agentic Multimodal Models via Compositional Visual Tool Chaining",
+      "date": "2026-03-23",
+      "note_path": "papers/2026/2026-03-23/vtc-bench-evaluating-agentic-multimodal-models-via-compositional-visual-tool-cha.md",
+      "canonical_url": "https://arxiv.org/html/2603.15030",
+      "source_name": "hf-daily"
+    },
+    "2603.19220": {
+      "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+      "date": "2026-03-23",
+      "note_path": "papers/2026/2026-03-23/nemotron-cascade-2-post-training-llms-with-cascade-rl-and-multi-domain-on-policy.md",
+      "canonical_url": "https://arxiv.org/abs/2603.19220",
+      "source_name": "hf-daily"
+    },
+    "2603.18002": {
+      "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+      "date": "2026-03-23",
+      "note_path": "papers/2026/2026-03-23/loc3r-vlm-language-based-localization-and-3d-reasoning-with-vision-language-mode.md",
+      "canonical_url": "https://arxiv.org/html/2603.18002",
+      "source_name": "hf-daily"
     }
   }
 }

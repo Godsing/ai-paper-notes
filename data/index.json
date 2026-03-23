@@ -79,6 +79,68 @@
       "paper_type": "benchmark",
       "relevant": true,
       "note_path": "papers/2026/2026-03-15/strategic-navigation-or-stochastic-search-how-agents-and-humans-reason-over-docu.md"
+    },
+    {
+      "paper_id": "2603.15030",
+      "title": "VTC-Bench: Evaluating Agentic Multimodal Models via Compositional Visual Tool Chaining",
+      "date": "2026-03-23",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.15030",
+      "hf_url": "https://huggingface.co/papers/2603.15030",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.15030"
+      ],
+      "one_sentence_takeaway": "VTC-Bench 用 32 个视觉工具、680 道多步任务把多模态 agent 的真实短板暴露得很清楚：现阶段模型会调工具，但还远不会稳定地做复杂视觉工具链规划。",
+      "problem_background": "现有多模态工具调用 benchmark 的工具集偏少、轨迹偏短，难以反映真实视觉工作流里常见的多工具组合、长链路依赖和执行规划问题，所以很容易高估模型的视觉 agent 能力。",
+      "method_experiment": "作者构建了 VTC-Bench：基于 32 个 OpenCV 风格视觉操作，设计 680 个任务，覆盖九类认知层级，并给出 ground-truth tool trajectory。实验评测了 19 个主流 MLLM，同时分析模型在陌生工具、组合调用和长链执行下的表现。",
+      "findings_conclusion": "结果并不乐观：最强模型 Gemini-3.0-Pro 也只有约 51% 表现。模型普遍难以适应多样工具集，对未见操作泛化差；遇到复杂任务时，经常反复依赖少数熟悉函数，而不是为当前问题选择最优工具链。闭源模型加工具后收益更明显，开源模型有时甚至退化。",
+      "industrial_value": 4,
+      "readability": 4,
+      "comment": "对做视觉 agent、GUI/屏幕理解、图像处理工作流的人很值得看。它的价值不在于提出新模型，而在于告诉你：如果要把多模态 agent 真正推向生产，评测必须从“会不会调一个工具”升级到“能不能稳定编排整条工具链”。",
+      "paper_type": "benchmark",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-23/vtc-bench-evaluating-agentic-multimodal-models-via-compositional-visual-tool-cha.md"
+    },
+    {
+      "paper_id": "2603.19220",
+      "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+      "date": "2026-03-23",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/abs/2603.19220",
+      "hf_url": "https://huggingface.co/papers/2603.19220",
+      "other_urls": [],
+      "one_sentence_takeaway": "Nemotron-Cascade 2 的重点不是又一个大模型发布，而是给出一套更像工程流水线的后训练 recipe：把 Cascade RL 扩到多领域，再用按领域选最强中间 teacher 的 on-policy distillation 稳住收益。",
+      "problem_background": "后训练里常见的问题是：RL 能带来推理和 agent 能力提升，但训练过程容易出现 benchmark 回退、不同能力域此消彼长，而且高性能模型往往依赖很大的参数规模，不利于实际部署。",
+      "method_experiment": "作者发布一个 30B MoE、激活 3B 参数的开放模型。流程上先做精细 SFT，再把 Cascade RL 扩展到更广的推理与 agent 场景；训练过程中，对数学、代码等不同领域分别选取表现最强的中间 teacher，持续做 multi-domain on-policy distillation，用来回收退化并维持增益。论文同时公开模型 checkpoint 与训练数据。",
+      "findings_conclusion": "按论文给出的结果，这个配方让模型以相对小得多的激活参数，逼近前沿开放模型的数学与代码推理水平，并强调其 agent 能力也较强。作者想证明的是：高密度能力不只靠更大 base model，也可以靠更系统的后训练编排拿到。",
+      "industrial_value": 5,
+      "readability": 3,
+      "comment": "这篇对做开源推理模型、RL 后训练和 agent 模型迭代的团队最有现实价值，因为它讨论的是可复用训练策略，不只是榜单成绩。需要注意的是，本次总结只能基于 arXiv ABS 页面，因为 HTML 原文不可用，细节可信度不如全文阅读场景。",
+      "paper_type": "method",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-23/nemotron-cascade-2-post-training-llms-with-cascade-rl-and-multi-domain-on-policy.md"
+    },
+    {
+      "paper_id": "2603.18002",
+      "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+      "date": "2026-03-23",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.18002",
+      "hf_url": "https://huggingface.co/papers/2603.18002",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.18002",
+        "https://kevinqu7.github.io/loc3r-vlm"
+      ],
+      "one_sentence_takeaway": "Loc3R-VLM 说明了一件很实用的事：想让 VLM 真会 3D 空间理解，光往输入里塞几何特征不够，还得显式训练它学习全局布局和自身视角定位。",
+      "problem_background": "现有 MLLM 虽然会看图说话，但在空间理解、视角切换和跨帧整合上仍然很弱。很多 3D 增强方案依赖推理时可得的精确深度或相机位姿，现实部署里往往拿不到；而且它们多数只是把 3D 信息当附加输入，没有真正教模型形成稳定的空间表征。",
+      "method_experiment": "Loc3R-VLM 从单目视频出发，在 2D VLM 上加入两类联合目标：一是 global layout reconstruction，让模型形成场景级认知地图；二是 situation modeling，显式预测自身位置与朝向，从而支持 viewpoint-aware reasoning。为了保证几何一致性，作者还引入来自预训练 3D foundation model 的轻量 camera pose prior。实验覆盖 language-based localization、situated 3D QA 与 general 3D QA，并做了组件消融。",
+      "findings_conclusion": "论文报告该方法在 language-based localization 上达到 SOTA，并超过已有 2D 或 video-based 方法在 3D 问答上的表现。核心结论不是‘视频喂得更多就行’，而是显式空间监督和 situational awareness 本身就是能力来源。",
+      "industrial_value": 4,
+      "readability": 3,
+      "comment": "对做机器人、空间智能、室内导航、AR/具身 agent 的团队有参考价值。它提供了一条比“把 3D token 接到 VLM 前面”更靠谱的路线：先让模型学会内部空间地图和自定位，再谈高层问答与决策。",
+      "paper_type": "method",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-23/loc3r-vlm-language-based-localization-and-3d-reasoning-with-vision-language-mode.md"
     }
   ]
 }
