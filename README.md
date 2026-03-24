@@ -18,6 +18,8 @@
 
 | 日期 | 标题 | 来源 | 工业价值 | 易读性 |
 |---|---|---|---:|---:|
+| 2026-03-24 | [A Subgoal-driven Framework for Improving Long-Horizon LLM Agents](papers/2026/2026-03-24/a-subgoal-driven-framework-for-improving-long-horizon-llm-agents.md) | hf-daily | ★★★★★ | ★★★★ |
+| 2026-03-24 | [HiMu: Hierarchical Multimodal Frame Selection for Long Video Question Answering](papers/2026/2026-03-24/himu-hierarchical-multimodal-frame-selection-for-long-video-question-answering.md) | hf-daily | ★★★★ | ★★★★ |
 | 2026-03-23 | [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](papers/2026/2026-03-23/nemotron-cascade-2-post-training-llms-with-cascade-rl-and-multi-domain-on-policy.md) | hf-daily | ★★★★★ | ★★★ |
 | 2026-03-23 | [VTC-Bench: Evaluating Agentic Multimodal Models via Compositional Visual Tool Chaining](papers/2026/2026-03-23/vtc-bench-evaluating-agentic-multimodal-models-via-compositional-visual-tool-cha.md) | hf-daily | ★★★★ | ★★★★ |
 | 2026-03-23 | [Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models](papers/2026/2026-03-23/loc3r-vlm-language-based-localization-and-3d-reasoning-with-vision-language-mode.md) | hf-daily | ★★★★ | ★★★ |

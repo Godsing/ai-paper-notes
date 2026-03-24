@@ -1,0 +1,32 @@
+# HiMu: Hierarchical Multimodal Frame Selection for Long Video Question Answering
+
+- 日期：2026-03-24
+- 来源：hf-daily
+- 工业价值：★★★★
+- 易读性：★★★★
+
+## 原始链接
+
+- 规范链接：https://arxiv.org/html/2603.18558
+- Hugging Face：https://huggingface.co/papers/2603.18558
+- 其他链接：- https://arxiv.org/abs/2603.18558
+
+## 一句话结论
+
+HiMu 的价值在于把长视频问答里的“选哪些帧”从昂贵的多轮 LVLM 推理，改成一次文本 LLM 分解 + 轻量多模态专家打分，在精度和算力之间拿到了更实用的平衡。
+
+## 问题 / 背景
+
+长视频 QA 往往不是模型不会答，而是上下文窗口放不下整段视频，必须先选帧。现有方案要么靠相似度检索，速度快但听不懂组合式、跨模态约束；要么靠 agent 式多轮推理，效果更强但成本高得不适合大规模用。
+
+## 方法 / 实验
+
+HiMu 是一个 training-free 框架：先用一次纯文本 LLM 调用把问题拆成层级逻辑树，叶子节点分发给不同轻量专家，如 CLIP、开放词表检测、OCR、ASR、CLAP；随后把各模态信号做归一化与时间平滑，再用 fuzzy logic 自底向上合成连续满足度曲线，最后用 PASS 选出关键帧。实验覆盖 Video-MME、LongVideoBench 和 HERBench-Lite，并比较不同帧预算和 FLOPs。
+
+## 发现 / 结论
+
+论文显示 HiMu 明显改善了效率-精度 Pareto front：在 16 帧预算下配合 Qwen3-VL 8B 就能超过其他 selector；配合 GPT-4o 时，效果还能超过一些使用 32 到 512 帧的 agentic 系统，同时大约节省 10 倍 FLOPs。核心结论是：复杂视频问题的组合结构，可以在进入重模型前先被拆清楚，不一定非要靠多轮大模型搜索硬做。
+
+## 简评
+
+对做视频理解、长上下文多模态检索、监控/媒体分析流水线的人值得看。它更像一个前置选择器，而不是又一个更重的端到端大模型，工程接入成本相对可控，也更贴近线上算力约束。

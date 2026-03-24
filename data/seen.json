@@ -48,6 +48,20 @@
       "note_path": "papers/2026/2026-03-23/loc3r-vlm-language-based-localization-and-3d-reasoning-with-vision-language-mode.md",
       "canonical_url": "https://arxiv.org/html/2603.18002",
       "source_name": "hf-daily"
+    },
+    "2603.19685": {
+      "title": "A Subgoal-driven Framework for Improving Long-Horizon LLM Agents",
+      "date": "2026-03-24",
+      "note_path": "papers/2026/2026-03-24/a-subgoal-driven-framework-for-improving-long-horizon-llm-agents.md",
+      "canonical_url": "https://arxiv.org/html/2603.19685",
+      "source_name": "hf-daily"
+    },
+    "2603.18558": {
+      "title": "HiMu: Hierarchical Multimodal Frame Selection for Long Video Question Answering",
+      "date": "2026-03-24",
+      "note_path": "papers/2026/2026-03-24/himu-hierarchical-multimodal-frame-selection-for-long-video-question-answering.md",
+      "canonical_url": "https://arxiv.org/html/2603.18558",
+      "source_name": "hf-daily"
     }
   }
 }

@@ -141,6 +141,48 @@
       "paper_type": "method",
       "relevant": true,
       "note_path": "papers/2026/2026-03-23/loc3r-vlm-language-based-localization-and-3d-reasoning-with-vision-language-mode.md"
+    },
+    {
+      "paper_id": "2603.19685",
+      "title": "A Subgoal-driven Framework for Improving Long-Horizon LLM Agents",
+      "date": "2026-03-24",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.19685",
+      "hf_url": "https://huggingface.co/papers/2603.19685",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.19685"
+      ],
+      "one_sentence_takeaway": "这篇最值得关注的点是：作者把“子目标”同时用于推理时规划和 RL 训练时奖励塑形，显著提升了长链网页 Agent 的稳定性，开放模型 Gemma3-12B 在 WebArena-Lite 上可从 6.4% 拉到 43.0%。",
+      "problem_background": "长链网页操作的核心难点不是单步点击，而是过程中持续保持目标感。现有 LLM Agent 常在中途卡住、绕圈，RL 微调又因为奖励稀疏，很难学到哪些中间步骤真正推动任务完成。",
+      "method_experiment": "论文先分析失败轨迹，发现“mid-task stuck”是主要瓶颈。方法上分两层：一是在推理阶段先把任务拆成可执行子目标，并结合回顾式反思动态修正；二是在训练阶段提出 MiRA，用里程碑式子目标完成度做 dense reward shaping，并配合 goal-conditioned value critic 做策略优化。实验主要在 WebArena-Lite 上评测，既看闭源模型接入在线规划后的收益，也看 Gemma3-12B 经 MiRA 后的提升。",
+      "findings_conclusion": "结果很硬：在线子目标规划可让 Gemini 类模型拿到约 10 个点的绝对成功率提升；MiRA 则把 Gemma3-12B 从 6.4% 提升到 43.0%，超过文中列出的 GPT-4-Turbo、GPT-4o 和此前 open SOTA WebRL。论文传达的信息很明确：长链 Agent 的关键不只是更强底座，而是把“阶段性可验证进展”显式建进推理与训练闭环里。",
+      "industrial_value": 5,
+      "readability": 4,
+      "comment": "对做 Browser Agent、Computer Use、GUI 自动化和 agent RL 的团队很有现实价值。它给出的不是单点技巧，而是一套可落地的工程方向：把任务拆解、进度判断和奖励塑形统一起来，优先解决中途失焦的问题。",
+      "paper_type": "method",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-24/a-subgoal-driven-framework-for-improving-long-horizon-llm-agents.md"
+    },
+    {
+      "paper_id": "2603.18558",
+      "title": "HiMu: Hierarchical Multimodal Frame Selection for Long Video Question Answering",
+      "date": "2026-03-24",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.18558",
+      "hf_url": "https://huggingface.co/papers/2603.18558",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.18558"
+      ],
+      "one_sentence_takeaway": "HiMu 的价值在于把长视频问答里的“选哪些帧”从昂贵的多轮 LVLM 推理，改成一次文本 LLM 分解 + 轻量多模态专家打分，在精度和算力之间拿到了更实用的平衡。",
+      "problem_background": "长视频 QA 往往不是模型不会答，而是上下文窗口放不下整段视频，必须先选帧。现有方案要么靠相似度检索，速度快但听不懂组合式、跨模态约束；要么靠 agent 式多轮推理，效果更强但成本高得不适合大规模用。",
+      "method_experiment": "HiMu 是一个 training-free 框架：先用一次纯文本 LLM 调用把问题拆成层级逻辑树，叶子节点分发给不同轻量专家，如 CLIP、开放词表检测、OCR、ASR、CLAP；随后把各模态信号做归一化与时间平滑，再用 fuzzy logic 自底向上合成连续满足度曲线，最后用 PASS 选出关键帧。实验覆盖 Video-MME、LongVideoBench 和 HERBench-Lite，并比较不同帧预算和 FLOPs。",
+      "findings_conclusion": "论文显示 HiMu 明显改善了效率-精度 Pareto front：在 16 帧预算下配合 Qwen3-VL 8B 就能超过其他 selector；配合 GPT-4o 时，效果还能超过一些使用 32 到 512 帧的 agentic 系统，同时大约节省 10 倍 FLOPs。核心结论是：复杂视频问题的组合结构，可以在进入重模型前先被拆清楚，不一定非要靠多轮大模型搜索硬做。",
+      "industrial_value": 4,
+      "readability": 4,
+      "comment": "对做视频理解、长上下文多模态检索、监控/媒体分析流水线的人值得看。它更像一个前置选择器，而不是又一个更重的端到端大模型，工程接入成本相对可控，也更贴近线上算力约束。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-24/himu-hierarchical-multimodal-frame-selection-for-long-video-question-answering.md"
     }
   ]
 }
