@@ -183,6 +183,69 @@
       "paper_type": "system",
       "relevant": true,
       "note_path": "papers/2026/2026-03-24/himu-hierarchical-multimodal-frame-selection-for-long-video-question-answering.md"
+    },
+    {
+      "paper_id": "2603.09290",
+      "title": "ToolRosetta: Bridging Open-Source Repositories and Large Language Model Agents through Automated Tool Standardization",
+      "date": "2026-03-25",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.09290",
+      "hf_url": "https://huggingface.co/papers/2603.09290",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.09290"
+      ],
+      "one_sentence_takeaway": "ToolRosetta 最值得看的点是：它试图把“仓库代码 → 可被 Agent 直接调用的 MCP 工具”自动化，若工程质量成立，会显著降低工具接入和复现实验的人力成本。",
+      "problem_background": "现在很多高价值工具都埋在异构开源仓库里，接口、依赖和运行方式都不统一，导致 LLM agent 虽然会调工具框架，却很难大规模稳定复用真实世界代码。作者要解决的是：能否把代码仓库自动标准化成可执行、可编排的 MCP 工具，而不是继续靠人工逐个封装。",
+      "method_experiment": "ToolRosetta 采用分层多 agent 流程：Planning agent 负责整体编排，Tool-search agent 找候选仓库，MCP-construction agent 做仓库克隆、语义分析、环境配置和 MCP 服务生成，另加 Security agent 做隐私泄露与安全风险检查。论文称其可自动把 1580 个开源工具转成标准化可执行接口，并在多个科学领域任务上比较任务完成效果。",
+      "findings_conclusion": "论文报告 ToolRosetta 相比商业 LLM 和既有 scientific agent baseline 有明显任务完成率提升，六个科学领域的宏平均准确率相对最强基线提升超过 31%。更重要的结论是：如果工具标准化本身能被自动化，Agent 的能力上限就不再只受限于人工维护的小型工具库。",
+      "industrial_value": 5,
+      "readability": 4,
+      "comment": "对做 MCP、Agent 平台、企业内部工具封装和代码资产复用的团队很值得看。它击中的不是单个 benchmark，而是一个真实工程瓶颈：工具很多，但可调用的工具太少。需要保留一点审慎：这类系统真正落地时，环境隔离、依赖治理和安全审计往往比论文结果更难。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-25/toolrosetta-bridging-open-source-repositories-and-large-language-model-agents-th.md"
+    },
+    {
+      "paper_id": "2603.21065",
+      "title": "LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning",
+      "date": "2026-03-25",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.21065",
+      "hf_url": "https://huggingface.co/papers/2603.21065",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.21065"
+      ],
+      "one_sentence_takeaway": "LongCat-Flash-Prover 的核心价值是把 Lean4 形式化推理拆成自动形式化、草图生成和证明三种原生能力，再用工具集成 RL 去做长链可验证训练，证明开源模型也能把 formal reasoning 推到更实用的水平。",
+      "problem_background": "现有 LLM 在自然语言推理上进步很快，但一进到 Lean4 这类形式化证明环境，就会遇到长链决策、编译反馈、语义一致性和 reward hacking 等一整套新问题。传统工具调用套路并不足以直接解决这类严格验证任务。",
+      "method_experiment": "论文提出 Hybrid-Experts Iteration Framework，分别训练 auto-formalization、sketching 和 proving 专家，通过 Lean4 编译与验证反馈合成高质量轨迹，再做迭代优化。RL 阶段引入 HisPO，用分层 importance sampling 和梯度屏蔽缓解 MoE 长链训练中的策略陈旧与训练-推理引擎不一致问题；同时加入 theorem consistency 与 legality detection，抑制形式化场景常见的 reward hacking。实验覆盖 auto-formalization、theorem proving 和一般推理任务。",
+      "findings_conclusion": "结果显示它在开放权重 formal reasoning 上做到很强：MiniF2F-Test 用 72 次尝试可达 97.1%，ProverBench 达 70.8%，PutnamBench 达 41.5%，并宣称明显优于现有开源基线。更值得注意的是，作者强调样本效率和工具反馈闭环，而不只是靠更大搜索预算硬堆结果。",
+      "industrial_value": 4,
+      "readability": 3,
+      "comment": "这篇更偏前沿研究，但对做可验证代码生成、证明助手、数学推理和高可靠 agent 的团队仍有参考价值。短期内它未必直接转成通用产品能力，但它说明：一旦任务具备可验证环境，agentic RL 加工具反馈确实能比纯语言监督更有效。",
+      "paper_type": "method",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-25/longcat-flash-prover-advancing-native-formal-reasoning-via-agentic-tool-integrat.md"
+    },
+    {
+      "paper_id": "2603.18118",
+      "title": "Insight-V++: Towards Advanced Long-Chain Visual Reasoning with Multimodal Large Language Models",
+      "date": "2026-03-25",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.18118",
+      "hf_url": "https://huggingface.co/papers/2603.18118",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.18118"
+      ],
+      "one_sentence_takeaway": "Insight-V++ 的重点不是再堆一个更大的 MLLM，而是把视觉长链推理拆成“推理 agent + 总结 agent + 自进化数据闭环”，尝试把图像和视频推理训练流程做成可持续优化的系统。",
+      "problem_background": "MLLM 在感知任务上已经不差，但一到需要长链视觉推理、尤其是视频时，就同时卡在两件事上：高质量 reasoning 数据太少，以及现有训练流程对长时空推理不够稳。作者要解决的是如何系统性提升 image/video reasoning，而不是只靠 prompt 或少量偏好数据微调。",
+      "method_experiment": "论文先做可自动生成的结构化 reasoning data pipeline，再采用双 agent 设计：reasoning agent 负责长链分析，summary agent 负责评估与压缩最终结论。相较早期 DPO 方案，Insight-V++ 进一步提出 ST-GRPO 和 J-GRPO 两个 RL 目标，分别加强时空推理与总结评估鲁棒性；随后利用 summary agent 的反馈持续改写 reasoning 轨迹，形成 self-evolving 训练闭环。实验基于 LLaVA-NeXT、Qwen2.5-VL 等底座，在图像与视频 benchmark 上评测。",
+      "findings_conclusion": "论文报告该框架能在多种图像和视频推理 benchmark 上持续提升，同时尽量不牺牲传统感知能力。真正有价值的结论是：多模态长链推理的瓶颈不只在模型参数，更在数据生成、评估器质量和训练闭环是否能自我改进。",
+      "industrial_value": 4,
+      "readability": 3,
+      "comment": "对做视频理解、多模态 Agent、视觉 reasoning 训练的团队有参考价值。它更像一套训练系统设计，而不是可立即上线的产品功能；但如果你在做高难视觉任务，这种“生成数据—训练推理器—训练评估器—再反哺数据”的闭环思路很值得借鉴。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-25/insight-v-towards-advanced-long-chain-visual-reasoning-with-multimodal-large-lan.md"
     }
   ]
 }

@@ -62,6 +62,27 @@
       "note_path": "papers/2026/2026-03-24/himu-hierarchical-multimodal-frame-selection-for-long-video-question-answering.md",
       "canonical_url": "https://arxiv.org/html/2603.18558",
       "source_name": "hf-daily"
+    },
+    "2603.09290": {
+      "title": "ToolRosetta: Bridging Open-Source Repositories and Large Language Model Agents through Automated Tool Standardization",
+      "date": "2026-03-25",
+      "note_path": "papers/2026/2026-03-25/toolrosetta-bridging-open-source-repositories-and-large-language-model-agents-th.md",
+      "canonical_url": "https://arxiv.org/html/2603.09290",
+      "source_name": "hf-daily"
+    },
+    "2603.21065": {
+      "title": "LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning",
+      "date": "2026-03-25",
+      "note_path": "papers/2026/2026-03-25/longcat-flash-prover-advancing-native-formal-reasoning-via-agentic-tool-integrat.md",
+      "canonical_url": "https://arxiv.org/html/2603.21065",
+      "source_name": "hf-daily"
+    },
+    "2603.18118": {
+      "title": "Insight-V++: Towards Advanced Long-Chain Visual Reasoning with Multimodal Large Language Models",
+      "date": "2026-03-25",
+      "note_path": "papers/2026/2026-03-25/insight-v-towards-advanced-long-chain-visual-reasoning-with-multimodal-large-lan.md",
+      "canonical_url": "https://arxiv.org/html/2603.18118",
+      "source_name": "hf-daily"
     }
   }
 }
