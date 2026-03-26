@@ -18,6 +18,8 @@
 
 | 日期 | 标题 | 来源 | 工业价值 | 易读性 |
 |---|---|---|---:|---:|
+| 2026-03-26 | [VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions](papers/2026/2026-03-26/vision-on-request-enhanced-vllm-efficiency-with-sparse-dynamically-selected-visi.md) | hf-daily | ★★★★★ | ★★★★ |
+| 2026-03-26 | [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](papers/2026/2026-03-26/speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception-and-pla.md) | hf-daily | ★★★★★ | ★★★★ |
 | 2026-03-25 | [ToolRosetta: Bridging Open-Source Repositories and Large Language Model Agents through Automated Tool Standardization](papers/2026/2026-03-25/toolrosetta-bridging-open-source-repositories-and-large-language-model-agents-th.md) | hf-daily | ★★★★★ | ★★★★ |
 | 2026-03-25 | [LongCat-Flash-Prover: Advancing Native Formal Reasoning via Agentic Tool-Integrated Reinforcement Learning](papers/2026/2026-03-25/longcat-flash-prover-advancing-native-formal-reasoning-via-agentic-tool-integrat.md) | hf-daily | ★★★★ | ★★★ |
 | 2026-03-25 | [Insight-V++: Towards Advanced Long-Chain Visual Reasoning with Multimodal Large Language Models](papers/2026/2026-03-25/insight-v-towards-advanced-long-chain-visual-reasoning-with-multimodal-large-lan.md) | hf-daily | ★★★★ | ★★★ |

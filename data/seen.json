@@ -83,6 +83,20 @@
       "note_path": "papers/2026/2026-03-25/insight-v-towards-advanced-long-chain-visual-reasoning-with-multimodal-large-lan.md",
       "canonical_url": "https://arxiv.org/html/2603.18118",
       "source_name": "hf-daily"
+    },
+    "2603.23483": {
+      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+      "date": "2026-03-26",
+      "note_path": "papers/2026/2026-03-26/speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception-and-pla.md",
+      "canonical_url": "https://arxiv.org/html/2603.23483",
+      "source_name": "hf-daily"
+    },
+    "2603.23495": {
+      "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
+      "date": "2026-03-26",
+      "note_path": "papers/2026/2026-03-26/vision-on-request-enhanced-vllm-efficiency-with-sparse-dynamically-selected-visi.md",
+      "canonical_url": "https://arxiv.org/html/2603.23495",
+      "source_name": "hf-daily"
     }
   }
 }

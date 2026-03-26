@@ -246,6 +246,48 @@
       "paper_type": "system",
       "relevant": true,
       "note_path": "papers/2026/2026-03-25/insight-v-towards-advanced-long-chain-visual-reasoning-with-multimodal-large-lan.md"
+    },
+    {
+      "paper_id": "2603.23483",
+      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+      "date": "2026-03-26",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.23483",
+      "hf_url": "https://huggingface.co/papers/2603.23483",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.23483"
+      ],
+      "one_sentence_takeaway": "SpecEyes 用“小模型先猜、大模型兜底”的 speculative agent 流程，直接切掉不少不必要的视觉工具链，把 agentic MLLM 的时延和并发瓶颈一起打下来。",
+      "problem_background": "多模态 agent 为了做细粒度视觉推理，通常要反复调用裁剪、放大、OCR 等工具；问题是这些步骤天然串行，单请求时延随 agentic depth 线性增长，并发时几乎吃不到 batching 红利。",
+      "method_experiment": "论文把 speculative 思路从 token 级抬到 agent 级：先用轻量、无工具的小型 MLLM 预测回答和执行轨迹，再用基于 answer separability 的认知门控判断这次猜测是否可信；低置信样本才回退到原始大模型工具链。系统层面又做了异构并行，让小模型并发跑、把大模型串行开销尽量藏到后面。实验覆盖 V* Bench、HR-Bench、POPE，并分析了门控校准与消融。",
+      "findings_conclusion": "在三套 benchmark 上，SpecEyes 相比原始 agent baseline 实现 1.1 到 3.35 倍加速，同时精度持平甚至最高提升 6.7%。论文最有价值的点不是某个门控分数，而是说明：很多视觉 agent 查询根本不需要完整工具链，可以先做便宜的 speculative triage。",
+      "industrial_value": 5,
+      "readability": 4,
+      "comment": "非常值得做多模态 agent serving 的团队看。它对应的是线上真实痛点：工具调用链太深、吞吐上不去、单位请求成本太高。相比纯 token/speculative decoding，这篇更贴近 agent 系统级优化。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-26/speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception-and-pla.md"
+    },
+    {
+      "paper_id": "2603.23495",
+      "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
+      "date": "2026-03-26",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.23495",
+      "hf_url": "https://huggingface.co/papers/2603.23495",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.23495"
+      ],
+      "one_sentence_takeaway": "VISOR 不再靠“删视觉 token”省算力，而是改成“少数关键层再看全量视觉信息”，因此在保住高分辨率细节的同时显著降低 LVLM 推理成本。",
+      "problem_background": "现有高效 LVLM 大多通过 pruning / merging / compression 减少视觉 token，但这会形成信息瓶颈；一旦任务需要细粒度理解、文档阅读或高分辨率视觉推理，性能就容易明显掉。",
+      "method_experiment": "VISOR 把开销重点从“多少 token 被保留”转到“多少层真的需要做重视觉交互”。做法是：大部分层只保留便宜的 text-image cross-attention 提供通用视觉上下文；只有少数经过策略选择的层才执行会更新视觉表征的 self-attention。作者还训练了一个覆盖多种计算预算的统一模型，并用轻量策略网络按样本动态分配需要开启的 self-attention 层数；同时验证它能与 token reduction 方法叠加。",
+      "findings_conclusion": "实验表明，VISOR 在多项视觉语言 benchmark 上以更低 FLOPs 达到或超过现有高效方法，尤其在需要细节理解的“hard”任务上优势更明显。核心结论是：比起永久丢掉视觉信息，更有效的路线可能是按需打开高成本视觉-语言交互。",
+      "industrial_value": 5,
+      "readability": 4,
+      "comment": "这篇对做 VLM 推理优化、边缘部署、文档/屏幕理解的人很有参考价值。它提供了一个比 token 压缩更稳的效率方向，而且和现有压缩路线是可组合的。",
+      "paper_type": "method",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-26/vision-on-request-enhanced-vllm-efficiency-with-sparse-dynamically-selected-visi.md"
     }
   ]
 }
