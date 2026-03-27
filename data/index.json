@@ -288,6 +288,71 @@
       "paper_type": "method",
       "relevant": true,
       "note_path": "papers/2026/2026-03-26/vision-on-request-enhanced-vllm-efficiency-with-sparse-dynamically-selected-visi.md"
+    },
+    {
+      "paper_id": "2603.22918",
+      "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+      "date": "2026-03-27",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.22918",
+      "hf_url": "https://huggingface.co/papers/2603.22918",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.22918",
+        "https://github.com/wangruohui/EfficientVideoAgent"
+      ],
+      "one_sentence_takeaway": "EVA 的核心价值是把长视频理解从“先喂一堆帧再让模型回答”，改成“先规划再感知”的端到端视频 agent，并用三阶段训练把效果和算力效率一起拉上去。",
+      "problem_background": "长视频理解的主要瓶颈不是模型完全看不懂，而是视频 token 太长、冗余太多，传统均匀采样或被动看完整段视频都很浪费。现有 agent 方法虽然会调工具，但通常流程写死，而且仍然是 perception-first，面对超长视频时既贵又不够准。",
+      "method_experiment": "EVA 采用 summary-plan-action-reflection 的循环：先只根据问题决定看什么、什么时候看、以什么分辨率和帧率看，再逐轮缩小关键时间段。训练上用 SFT 冷启动、KTO 学习成功/失败策略偏好、GRPO 做在线强化学习；同时构建 EVA-SFT、EVA-KTO、EVA-RL 三套数据。实验覆盖 6 个视频理解 benchmark，并专门比较长视频场景下的精度与计算效率。",
+      "findings_conclusion": "论文报告 EVA 相比通用 MLLM baseline 提升约 6% 到 12%，比已有 adaptive agent 方案再高 1% 到 3%。更重要的是，它证明视频 agent 真正有用的不是多接一个采样工具，而是让模型先做 query-driven 规划，把视觉预算集中花在关键片段上。",
+      "industrial_value": 5,
+      "readability": 4,
+      "comment": "对做视频搜索、监控分析、长视频 QA、多模态 agent 的团队很值得看。它给出的不是单点 trick，而是一条更贴近线上成本约束的系统路线：先规划，再按需看视频。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-27/eva-efficient-reinforcement-learning-for-end-to-end-video-agent.md"
+    },
+    {
+      "paper_id": "2603.24157",
+      "title": "CarePilot: A Multi-Agent Framework for Long-Horizon Computer Task Automation in Healthcare",
+      "date": "2026-03-27",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.24157",
+      "hf_url": "https://huggingface.co/papers/2603.24157",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.24157"
+      ],
+      "one_sentence_takeaway": "CarePilot 的价值在于把长链 GUI agent 真正推进到医疗软件场景：不仅提出多 agent + 双记忆框架，还补上了一个更贴近真实临床流程的长时程 benchmark。",
+      "problem_background": "现有 computer-use 和 GUI agent 评测大多集中在网页、桌面或手机等通用环境，缺少医疗软件这类高约束、强流程依赖、错误代价高的场景。医疗工作流常常要跨 DICOM viewer、标注工具、EHR/LIS 等系统连续执行十几步，传统视觉 agent 很容易在状态跟踪、面板切换和长程规划上失效。",
+      "method_experiment": "论文先构建 CareFlow 基准，覆盖医学影像查看、标注、EHR 与实验室信息系统等四类临床软件任务，每个任务通常有 8 到 24 步。随后提出 CarePilot：Actor 负责结合截图、指令、工具 grounding 和长短期记忆预测下一步语义动作；Critic 负责评估动作、更新记忆并给纠错反馈，形成 actor-critic 式迭代。实验比较多种开源和闭源 VLM baseline，并做失误模式与消融分析。",
+      "findings_conclusion": "结果显示，现有强基线在医疗长流程软件上明显掉队，而 CarePilot 在自建 benchmark 和 OOD 数据上都取得领先，文中给出的提升幅度约为相对强闭源基线 +15.26%、相对强开源基线 +3.38%。更关键的结论是：在高风险行业里，agent 要想可用，记忆、状态校验和领域 benchmark 缺一不可。",
+      "industrial_value": 4,
+      "readability": 3,
+      "comment": "对做医疗 AI、垂直行业 computer use、企业工作流自动化的人有现实参考价值。它未必能立刻直接落地到生产，但很清楚地指出了通用 GUI agent 进入专业软件后的真实短板。",
+      "paper_type": "system",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-27/carepilot-a-multi-agent-framework-for-long-horizon-computer-task-automation-in-h.md"
+    },
+    {
+      "paper_id": "2603.24329",
+      "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
+      "date": "2026-03-27",
+      "source_name": "hf-daily",
+      "canonical_url": "https://arxiv.org/html/2603.24329",
+      "hf_url": "https://huggingface.co/papers/2603.24329",
+      "other_urls": [
+        "https://arxiv.org/abs/2603.24329",
+        "https://hats-ict.github.io/gameplayqa/"
+      ],
+      "one_sentence_takeaway": "GameplayQA 不是再做一个泛泛的视频 benchmark，而是专门拿多视角、快节奏、强决策密度的 3D 游戏场景去测 agent 感知能力，因此更容易暴露当前 MLLM 在时序、角色归因和跨视频对齐上的真实短板。",
+      "problem_background": "很多现有视频理解 benchmark 更像被动看视频问答，难以覆盖具身或多 agent 场景里常见的高频状态变化、他者行为建模和多视角同步理解。对于想把 MLLM 当成机器人、虚拟 agent 或复杂仿真环境感知底座的人，这类评测往往太轻，测不出真正的系统瓶颈。",
+      "method_experiment": "作者基于 9 个多人 3D 商业游戏，构建时间同步的多 POV 视频和高密度标注，标注密度约 1.22 labels/second，并按 Self、Other、World 三类实体组织状态、动作和事件。随后用模板化组合生成与人工质检结合，得到约 2.4K 诊断式 QA，对应三层认知复杂度，并设计 lexical、temporal、role-based 等 distractor taxonomy 来分析幻觉来源。",
+      "findings_conclusion": "评测结果表明，前沿 MLLM 与人类之间仍有明显差距，尤其在快节奏、高决策密度、跨视频同步和其他 agent 建模任务上掉得最厉害。它传达的重点不是某个模型 SOTA，而是现阶段很多多模态模型离真正可用的 agentic perception 还差得很远。",
+      "industrial_value": 4,
+      "readability": 4,
+      "comment": "这篇更偏 benchmark，但对做 embodied AI、游戏 agent、机器人多视角感知、自动驾驶多摄像头理解的人很值得看。它提供了一种更接近真实决策环境的测法，而不是继续在低密度视频问答里高估模型能力。",
+      "paper_type": "benchmark",
+      "relevant": true,
+      "note_path": "papers/2026/2026-03-27/gameplayqa-a-benchmarking-framework-for-decision-dense-pov-synced-multi-video-un.md"
     }
   ]
 }

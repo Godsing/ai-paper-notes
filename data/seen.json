@@ -97,6 +97,27 @@
       "note_path": "papers/2026/2026-03-26/vision-on-request-enhanced-vllm-efficiency-with-sparse-dynamically-selected-visi.md",
       "canonical_url": "https://arxiv.org/html/2603.23495",
       "source_name": "hf-daily"
+    },
+    "2603.22918": {
+      "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+      "date": "2026-03-27",
+      "note_path": "papers/2026/2026-03-27/eva-efficient-reinforcement-learning-for-end-to-end-video-agent.md",
+      "canonical_url": "https://arxiv.org/html/2603.22918",
+      "source_name": "hf-daily"
+    },
+    "2603.24157": {
+      "title": "CarePilot: A Multi-Agent Framework for Long-Horizon Computer Task Automation in Healthcare",
+      "date": "2026-03-27",
+      "note_path": "papers/2026/2026-03-27/carepilot-a-multi-agent-framework-for-long-horizon-computer-task-automation-in-h.md",
+      "canonical_url": "https://arxiv.org/html/2603.24157",
+      "source_name": "hf-daily"
+    },
+    "2603.24329": {
+      "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
+      "date": "2026-03-27",
+      "note_path": "papers/2026/2026-03-27/gameplayqa-a-benchmarking-framework-for-decision-dense-pov-synced-multi-video-un.md",
+      "canonical_url": "https://arxiv.org/html/2603.24329",
+      "source_name": "hf-daily"
     }
   }
 }

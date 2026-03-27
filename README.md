@@ -18,6 +18,9 @@
 
 | 日期 | 标题 | 来源 | 工业价值 | 易读性 |
 |---|---|---|---:|---:|
+| 2026-03-27 | [EVA: Efficient Reinforcement Learning for End-to-End Video Agent](papers/2026/2026-03-27/eva-efficient-reinforcement-learning-for-end-to-end-video-agent.md) | hf-daily | ★★★★★ | ★★★★ |
+| 2026-03-27 | [GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents](papers/2026/2026-03-27/gameplayqa-a-benchmarking-framework-for-decision-dense-pov-synced-multi-video-un.md) | hf-daily | ★★★★ | ★★★★ |
+| 2026-03-27 | [CarePilot: A Multi-Agent Framework for Long-Horizon Computer Task Automation in Healthcare](papers/2026/2026-03-27/carepilot-a-multi-agent-framework-for-long-horizon-computer-task-automation-in-h.md) | hf-daily | ★★★★ | ★★★ |
 | 2026-03-26 | [VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions](papers/2026/2026-03-26/vision-on-request-enhanced-vllm-efficiency-with-sparse-dynamically-selected-visi.md) | hf-daily | ★★★★★ | ★★★★ |
 | 2026-03-26 | [SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning](papers/2026/2026-03-26/speceyes-accelerating-agentic-multimodal-llms-via-speculative-perception-and-pla.md) | hf-daily | ★★★★★ | ★★★★ |
 | 2026-03-25 | [ToolRosetta: Bridging Open-Source Repositories and Large Language Model Agents through Automated Tool Standardization](papers/2026/2026-03-25/toolrosetta-bridging-open-source-repositories-and-large-language-model-agents-th.md) | hf-daily | ★★★★★ | ★★★★ |
